@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SIP Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="header" id="topheader">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container text-uppercase p-2">
+
+
+        <a class="navbar-brand font-weight-bold text-white" href="#">Sip Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto text-uppercase">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Goal Based Sip Calculator</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+    <section class="header-section">
+      <div class="caption-cont">
+
+        <h1 class="font-weight-bold">SIP CALCULATOR</h1>
+
+      </div>
+      <div class="container-fluid">
+        <div id="calc-form" class="container">
+          <form action="">
+            <div class="row">
+              <div class="col-sm-6">
+                
+                <label class="form-field-label" for="first-name">Investment Amount(Rs.): <em class="alert">*</em></label>
+                  <br>
+                  <div class="form-wrap" style="display:grid; grid-auto-flow: column;">
+                    <div>
+                      <input type="number" name="" id="invstamount" required>
+                    </div>
+                 
+                  <div>
+                    <select id="invst_type" class="custom-select">
+                      <option value="week" selected>Weekly</option>
+                      <option value="mon">Monthly</option>
+                      <option value="quat">Quarterly</option>
+                    </select>
+                  </div>
+                  </div>
+                  
+                <br>
+                <br>
+                <label class="form-field-label" for="first-name">Expected Annual Returns (%) <em class="alert">*</em></label>
+                <br>
+                <input type="number" name="" id="expreturn" required>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-field-label" for="first-name" id="field3">Investment Period: <em class="alert">*</em></label>
+                <br>
+                <input type="number" name="" id="invstperiod" required>
+                <br>
+                <br>
+                <br>
+                <label class="form-field-label" for="first-name">Adjust for Inflation ?  <em class="alert">*</em></label>
+                <br>
+                <select id="inflation" class="custom-select">
+                  <option value = "no" selected>No Inflation</option>
+                  <option value="6">6%</option>
+                  <option value="8">8%</option>
+                  <option value="10">10%</option>
+                  <option value="12">12%</option>
+                </select>
+              </div>
+            </div>
+
+
+
+          </form>
+          <br><br>
+          <center><button type="button" class="btn btn-dark">Calculate</button>
+          </center>
+        </div>
+      </div>
+      <div class="container-fluid" id="result-cont">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div id="result1" class="container res-box">
+                <label class="form-field-label" for="first-name" id="field3">Result Field 1: <em class="alert">*</em></label>
+                <input type="text" name="" id="">
+                <br><label class="form-field-label" for="first-name" id="field3">Result Field 1: <em class="alert">*</em></label>
+                <input type="text" name="" id="">
+                <br><label class="form-field-label" for="first-name" id="field3">Result Field 1: <em class="alert">*</em></label>
+                <input type="text" name="" id="">
+                <br><label class="form-field-label" for="first-name" id="field3">Result Field 1: <em class="alert">*</em></label>
+                <input type="text" name="" id="">
+              </div>
+              <div id="result2" class="container res-box">
+                <canvas id="myChart" width="400" height="400"></canvas> 
+              </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="container res-box" id="result3">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="static-content">
+          <div class="container">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
+         
+  
+          </div>
+      </div>
+
+
+
+    </section>
+
+
+  </div>
+
+
+  </div>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="./assets/sip_calc.js"></script>
+</body>
+<script>
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var stackedBar = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [16, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+    }
+});
+
+</script>
+</html>
