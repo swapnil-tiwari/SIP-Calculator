@@ -40,7 +40,7 @@
     <section class="header-section">
       <div class="caption-cont">
 
-        <h1 class="font-weight-bold">SIP CALCULATOR</h1>
+        <h1 class="font-weight-bold" id="primecap">SIP CALCULATOR</h1>
 
       </div>
       <div class="container-fluid">
@@ -214,6 +214,15 @@
 </body>
 <script>
   var result={};
+  function validateInput()
+  {
+    if(invstamount.value == "" || invstperiod.value=="" || expreturn.value == "")
+    {
+      return false;
+
+    }
+    return true;
+  }
   function createGraph()
   {
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -259,8 +268,16 @@
   }
   $("#calculatebtn").click(function ()
   {
-    $("#result_cont").fadeIn();
-    loadResult();
+    if(validateInput())
+    {
+      $("#result_cont").fadeIn();
+      loadResult();
+    }
+    else
+    {
+      alert("Please fill the required fields")
+    }
+    
   });
 
 

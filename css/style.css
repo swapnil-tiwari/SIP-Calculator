@@ -139,5 +139,9 @@ label
 	{
 		margin-top:20px;
 	}
+	#primecap
+	{
+		display: none;
+	}
 }
 
