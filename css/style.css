@@ -1,5 +1,12 @@
 *{margin: 0; padding: 0; box-sizing: border-box; }
-
+html
+{
+	scroll-behavior: smooth;
+}
+label
+{
+	font-weight: 500 !important;
+}
 a{text-decoration: none;}
 a:hover{ text-decoration: none; }
 li{ list-style: none; }
@@ -57,7 +64,7 @@ li{ list-style: none; }
 	padding: 50px;
 	background: #fff;
 	border-radius: 5px;
-	box-shadow: 0px 0px 8px 5px #bbaeae;
+	box-shadow: 0px 0px 3px 3px #dad7d7;
 }
  input[type=number] {
     transition: all 0.5s;
@@ -90,7 +97,7 @@ label
 {
 	background: #fff;
 	border-radius: 5px;
-	box-shadow: 0px 0px 8px 5px #bbaeae;
+	box-shadow: 0px 0px 3px 3px #dad7d7;
 	padding:20px;
 }
 #result_cont{
@@ -104,13 +111,18 @@ label
 {
 	background: #fff;
 	border-radius: 5px;
-	box-shadow: 0px 0px 8px 5px #bbaeae;
+	box-shadow: 0px 0px 3px 3px #dad7d7;
 	padding:20px;
 
 }
 #result2
 {
 	margin-top: 20px;
+}
+.footer-copyright
+{
+	background: #2D3047;
+	color: #fff;
 }
 
 @media screen and (max-width: 500px){
@@ -122,6 +134,10 @@ label
 	{
 		width:90%;
 		padding:20px;
+	}
+	.res_table
+	{
+		margin-top:20px;
 	}
 }
 

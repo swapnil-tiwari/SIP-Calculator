@@ -104,18 +104,18 @@
             <div class="col-sm-6">
               <div id="result1" class="container res-box">
                 <label class="form-field-label" for="first-name" >Expected Amount: <em class="alert">*</em></label>
-                <span id="rf1"  style="margin-left:5px; color:black; font-weight: bolder;">Rs. &nbsp;</span>
+                <span id="rf1"  style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
                 <br><label class="form-field-label" for="first-name" >Amount Invested: <em class="alert">*</em></label>
-                <span id="rf2"  style="margin-left:5px; color:black; font-weight: bolder;">Rs. &nbsp;</span>
+                <span id="rf2"  style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
                 <br><label class="form-field-label" for="first-name" >Profit Earned: <em class="alert">*</em></label>
-                <span id="rf3"  style="margin-left:5px; color:black; font-weight: bolder;" >Rs. &nbsp;</span>
+                <span id="rf3"  style="margin-left:5px; color:black; " >Rs. &nbsp;</span>
                 
               </div>
               <div id="result2" class="container res-box">
                 <canvas id="myChart" width="400" height="400"></canvas> 
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 res_table" >
                 <div class="container res-box" id="result3">
                   <table class="table table-hover">
                     <thead>
@@ -191,10 +191,15 @@
     </section>
 
 
+    <section class="footer">
+      <div class="footer-copyright text-center py-3">© 2020 Copyright Protected 
+        
+      </div>
+    </section>
   </div>
 
 
-  </div>
+  
 
 
 
@@ -245,6 +250,7 @@
   function loadResult()
   {
     result=calculateSIP();
+    window.scrollBy(0,350);
     rf1.innerText='Rs. ' + result.expected_amount;
     rf2.innerText='Rs. ' + result.amount_invested; 
     rf3.innerText='Rs. ' + result.profit_earned;
