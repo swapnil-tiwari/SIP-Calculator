@@ -1,3 +1,8 @@
+/* Git Author: Swapnil Tiwari
+Git config: swapnil_tiwari@outlook.com 
+Git user: swapnil-tiwari */
+
+
 console.log(" SIP Calculator Script Included");
 
 // let var1= investment amount

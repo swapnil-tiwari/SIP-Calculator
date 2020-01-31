@@ -93,10 +93,10 @@ label
 	box-shadow: 0px 0px 8px 5px #bbaeae;
 	padding:20px;
 }
-#result-cont{
+#result_cont{
 	color:black; 
 }
-#result-cont> .container
+#result_cont> .container
 {
 	padding:20px;
 }

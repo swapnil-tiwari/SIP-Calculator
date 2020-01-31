@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -93,23 +94,22 @@
 
           </form>
           <br><br>
-          <center><button type="button" class="btn btn-dark">Calculate</button>
+          <center><button type="button" class="btn btn-dark" id="calculatebtn">Calculate</button>
           </center>
         </div>
       </div>
-      <div class="container-fluid" id="result-cont">
+      <div class="container-fluid" id="result_cont" style="display: none;">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
               <div id="result1" class="container res-box">
-                <label class="form-field-label" for="first-name" id="field3">Result Field 1: <em class="alert">*</em></label>
-                <input type="text" name="" id="">
-                <br><label class="form-field-label" for="first-name" id="field3">Result Field 1: <em class="alert">*</em></label>
-                <input type="text" name="" id="">
-                <br><label class="form-field-label" for="first-name" id="field3">Result Field 1: <em class="alert">*</em></label>
-                <input type="text" name="" id="">
-                <br><label class="form-field-label" for="first-name" id="field3">Result Field 1: <em class="alert">*</em></label>
-                <input type="text" name="" id="">
+                <label class="form-field-label" for="first-name" >Expected Amount: <em class="alert">*</em></label>
+                <span id="rf1"  style="margin-left:5px; color:black; font-weight: bolder;">Rs. &nbsp;</span>
+                <br><label class="form-field-label" for="first-name" >Amount Invested: <em class="alert">*</em></label>
+                <span id="rf2"  style="margin-left:5px; color:black; font-weight: bolder;">Rs. &nbsp;</span>
+                <br><label class="form-field-label" for="first-name" >Profit Earned: <em class="alert">*</em></label>
+                <span id="rf3"  style="margin-left:5px; color:black; font-weight: bolder;" >Rs. &nbsp;</span>
+                
               </div>
               <div id="result2" class="container res-box">
                 <canvas id="myChart" width="400" height="400"></canvas> 
@@ -205,35 +205,28 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="./assets/sip_calc.js"></script>
+
 </body>
 <script>
-
-var ctx = document.getElementById('myChart').getContext('2d');
-var stackedBar = new Chart(ctx, {
+  var result={};
+  function createGraph()
+  {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var stackedBar = new Chart(ctx, {
     type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    data: { 
+        labels: ['Years'],
         datasets: [{
-            label: '# of Votes',
-            data: [16, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
+          label: 'Invested Amount',
+          data: [result.amount_invested],
+          backgroundColor: '#F2AF29',
+        },
+        {
+          label: 'Profit Earned',
+          data: [result.profit_earned],
+          backgroundColor: '#45CB85',
+        }
+      ]
     },
     options: {
         scales: {
@@ -246,6 +239,26 @@ var stackedBar = new Chart(ctx, {
         }
     }
 });
+
+
+  }
+  function loadResult()
+  {
+    result=calculateSIP();
+    rf1.innerText='Rs. ' + result.expected_amount;
+    rf2.innerText='Rs. ' + result.amount_invested; 
+    rf3.innerText='Rs. ' + result.profit_earned;
+    createGraph();
+    console.log(result);
+  }
+  $("#calculatebtn").click(function ()
+  {
+    $("#result_cont").fadeIn();
+    loadResult();
+  });
+
+
+
 
 </script>
 </html>
