@@ -148,6 +148,11 @@ label {
 	background: #2D3047;
 	color: #fff;
 }
+.valid_deactive
+{
+	font-size: 13px;
+	display: none;
+}
 
 @media screen and (max-width: 500px) {
 
