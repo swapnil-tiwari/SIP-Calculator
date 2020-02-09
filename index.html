@@ -29,7 +29,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Goal Based Sip Calculator</a>
+              <!-- <a class="nav-link" href="#">Goal Based Sip Calculator</a> -->
             </li>
 
           </ul>
@@ -48,14 +48,15 @@
           <form action="">
             <div class="row">
               <div class="col-sm-6">
-                
-                <label class="form-field-label" for="first-name">Investment Amount(Rs.): <em class="alert">*</em></label>
-                  <br>
-                  <div class="form-wrap" style="display:grid; grid-auto-flow: column;">
-                    <div>
-                      <input type="number" name="" id="invstamount" required>
-                    </div>
-                 
+
+                <label class="form-field-label" for="first-name">Investment Amount(Rs.): <em
+                    class="alert">*</em></label>
+                <br>
+                <div class="form-wrap" style="display:grid; grid-auto-flow: column;">
+                  <div>
+                    <input type="number" name="" id="invstamount" required>
+                  </div>
+
                   <div>
                     <select id="invst_type" class="custom-select">
                       <option value="week" selected>Weekly</option>
@@ -63,25 +64,27 @@
                       <option value="quat">Quarterly</option>
                     </select>
                   </div>
-                  </div>
-                  
+                </div>
+
                 <br>
                 <br>
-                <label class="form-field-label" for="first-name">Expected Annual Returns (%) <em class="alert">*</em></label>
+                <label class="form-field-label" for="first-name">Expected Annual Returns (%) <em
+                    class="alert">*</em></label>
                 <br>
                 <input type="number" name="" id="expreturn" required>
               </div>
               <div class="col-sm-6">
-                <label class="form-field-label" for="first-name" id="field3">Investment Period (Years) :  <em class="alert">*</em></label>
+                <label class="form-field-label" for="first-name" id="field3">Investment Period (Years) : <em
+                    class="alert">*</em></label>
                 <br>
                 <input type="number" name="" id="invstperiod" required>
                 <br>
                 <br>
                 <br>
-                <label class="form-field-label" for="first-name">Adjust for Inflation ?  <em class="alert">*</em></label>
+                <label class="form-field-label" for="first-name">Adjust for Inflation ? <em class="alert">*</em></label>
                 <br>
                 <select id="inflation" class="custom-select">
-                  <option value = "no" selected>No Inflation</option>
+                  <option value="no" selected>No Inflation</option>
                   <option value="6">6%</option>
                   <option value="8">8%</option>
                   <option value="10">10%</option>
@@ -103,52 +106,128 @@
           <div class="row">
             <div class="col-sm-6">
               <div id="result1" class="container res-box">
-                <label class="form-field-label" for="first-name" >Expected Amount: <em class="alert">*</em></label>
-                <span id="rf1"  style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
-                <br><label class="form-field-label" for="first-name" >Amount Invested: <em class="alert">*</em></label>
-                <span id="rf2"  style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
-                <br><label class="form-field-label" for="first-name" >Profit Earned: <em class="alert">*</em></label>
-                <span id="rf3"  style="margin-left:5px; color:black; " >Rs. &nbsp;</span>
-                
+                <label class="form-field-label" for="first-name">Expected Amount: <em class="alert">*</em></label>
+                <span id="rf1" style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
+                <br><label class="form-field-label" for="first-name">Amount Invested: <em class="alert">*</em></label>
+                <span id="rf2" style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
+                <br><label class="form-field-label" for="first-name">Profit Earned: <em class="alert">*</em></label>
+                <span id="rf3" style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
+
               </div>
               <div id="result2" class="container res-box">
-                <canvas id="myChart" width="400" height="400"></canvas> 
+                <canvas id="myChart" width="400" height="400"></canvas>
               </div>
             </div>
-            
-            <div class="col-sm-6 res_table" >
-                <div class="container res-box" id="result3">
-                  <table class="table table-hover">
-                    <caption style="caption-side: top; text-align: center;" id="tab_cap">Projected SIP returns for various time durations. [ @rate ]</caption>
-                    <thead>
-                      <tr>
-                        <th scope="col">Duration</th>
-                        <th scope="col">SIP Amount (₹)</th>
-                        <th scope="col">Future Value (₹)</th>
-                      </tr>
-                    </thead>
-                    <tbody id="projectTable">
-                      
-                    </tbody>
-                  </table>
 
-                </div>
+            <div class="col-sm-6 res_table">
+              <div class="container res-box" id="result3">
+                <table class="table table-hover">
+                  <caption style="caption-side: top; text-align: center;" id="tab_cap">Projected SIP returns for various
+                    time durations. [ @rate ]</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Duration</th>
+                      <th scope="col">SIP Amount (₹)</th>
+                      <th scope="col">Future Value (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="projectTable">
+
+                  </tbody>
+                </table>
+
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="container-fluid" id="static-content">
-          <div class="container">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut non fugit atque animi explicabo perspiciatis error consequatur impedit, officia reiciendis tempora, laborum illo excepturi ipsam voluptates cum. Commodi, tenetur eveniet!
-         
-  
+        <div class="container">
+          <div class="container" style="padding:20px; text-align: justify;">
+            <h2>SIP Calculator </h2> SIP Calculator is a tool which is used to make a <b>Systematic Investment Plan.
+            </b>
+            Using this tool you can calculate the amount of gain you will get if you invest a certain amount of money
+            periodically in a mutual fund. This calculator lets you enter
+
+            your weekly, monthly or quarterly <b>periodic investment amount, total duration of your investment in years,
+              your expected annual return and inflation rate. </b> Using these three inputs from the user, it generates
+            the amount (maturity amount) and the gain that you can expect in return from your mutual fund investments
+            after all the regular payments. Moreover, it also shows you the extended model of your investment
+
+
           </div>
+
+          <div class="container"><br>
+            <center><img src="./images/imgC.jpg" alt="" style="width:65vw;height:auto"></center>
+          </div>
+
+          <div class="container" style="padding:20px; text-align: justify;">
+            SIP stands for Systematic Investment Planning. This is an effective way of compounding money over the years.
+            This service is generally offered by the Mutual Fund companies. One has to invest even a small amount of
+            money periodically according to his/her goal of what they want to achieve. It is a passive approach to earn
+            compound money over the years without knowing anything about the market.
+            <br>
+            <br>
+            <b>How to use SIP Calculator for better profits</b> - Mutual fund companies take the money from the
+            investors and
+            invest their money into the market. Customer does not have to care about the market fluctuations. These
+            investments are generally best suited for long term investments, which helps the customer to earn maximum
+            Compound Interest. NEED TO WRITE MORE, write about how you can get maximum profit from sip scheme, like take
+            some figures like you should Invest atleast 5000 per month for 20-25 years so that you can get better
+            return. Discuss about what expected return rate you should consider, discuss according to present scenerio,
+            what the situation right now in 2020, mention 2020 whereever possible, write about inflation , how inflation
+            affect your SIP INVESTMENT, why you should always consider inflation while using SIP calculator, what
+            inflation rate you should select according to 2020.
+
+            <br>
+            <br>
+
+            <ul class='content_ul'>
+              <b>Benefits of SIP </b> -
+              <li> Investor does not have to know very much about the market technicality.</li>
+
+              <li> One can invest according to their own pace and according to their own earnings.</li>
+
+              <li> One can skip or alter a monthly cycle anytime they need to do so. </li>
+
+              <li> Better returns than many other ways of saving money like Fixed Deposits, Recurring Deposits etc.
+              </li>
+
+            </ul>
+            <br>
+            <br>
+
+            <b> Why you should invest in SIP rather than opting for any other investment plan - </b>
+
+            SIP is a best option to start investing for someone who want to invest in certain scheme which can give him
+            better return after a fixed interval of time as SIP pays off high returns in the long term with the
+            guarantee of substantial growth in investments and involves fewer market risks as compared to other equity
+            investments. There are several other factors which into play while we talk about why SIP is a better option
+            then any other investment. Let’s have a look at them:
+            <br>
+            <br>
+            <ul class="content_ul">
+              <li> <b>Less term and condition :</b> With SIP investment the term and condition are not that complex as
+                compare to
+                other. Here you simply select a mutual fund scheme with the fixed amount that you want to invest per
+                month
+                or per quarter, for a particular period of time. You can choose whether you want to pay manually every
+                month or quarter or you can automate this process by auto debit the fixed amount from your bank. </li>
+
+              <li><b> Suitable for Middle class people: </b> The SIP investment is more popular among all classes of
+                people because
+                you can invest any amount from 500 per month to any amount you want. </li>
+
+              <li> <b> Skippable Monthly Payment: </b> You can skip the payment of any month, you want. You can pay the
+                amount with
+                the payment of next month. </li>
+
+              <li> <b> Penalty on discontinuing the plan: </b> You can stop your plan anytime you want. There are no
+                penalties
+                for discontinuing the plan. </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
 
@@ -157,14 +236,14 @@
 
 
     <section class="footer">
-      <div class="footer-copyright text-center py-3">© 2020 Copyright Protected 
-        
+      <div class="footer-copyright text-center py-3">© 2020 Copyright Protected
+
       </div>
     </section>
   </div>
 
 
-  
+
 
 
 
@@ -178,109 +257,96 @@
 
 </body>
 <script>
-  var result={};
-  function validateInput()
-  {
-    if(invstamount.value == "" || invstperiod.value=="" || expreturn.value == "")
-    {
+  var result = {};
+
+  function validateInput() {
+    if (invstamount.value == "" || invstperiod.value == "" || expreturn.value == "") {
       return false;
 
     }
     return true;
   }
-  function createGraph()
-  {
+
+  function createGraph() {
     var ctx = document.getElementById('myChart').getContext('2d');
     var stackedBar = new Chart(ctx, {
-    type: 'bar',
-    data: { 
+      type: 'bar',
+      data: {
         labels: ['Amount in Rs'],
         datasets: [{
-          label: 'Invested Amount',
-          data: [result.amount_invested],
-          backgroundColor: '#F2AF29',
-        },
-        {
-          label: 'Profit Earned',
-          data: [result.profit_earned],
-          backgroundColor: '#45CB85',
-        }
-      ]
-    },
-    options: {
+            label: 'Invested Amount',
+            data: [result.amount_invested],
+            backgroundColor: '#F2AF29',
+          },
+          {
+            label: 'Profit Earned',
+            data: [result.profit_earned],
+            backgroundColor: '#45CB85',
+          }
+        ]
+      },
+      options: {
         scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true
-            }]
+          xAxes: [{
+            stacked: true
+          }],
+          yAxes: [{
+            stacked: true
+          }]
         }
-    }
-});
+      }
+    });
 
   }
 
-  function createTable()
-  {
-    var var_year=Number(invstperiod.value);
-    var table_dynamic=``;
-    for (var i=0;i<11;i++)
-    {
+  function createTable() {
+    var var_year = Number(invstperiod.value);
+    var table_dynamic = ``;
+    for (var i = 0; i < 11; i++) {
 
-      var proj_result=calculateProjectedData(var_year);
-      table_dynamic+=`
+      var proj_result = calculateProjectedData(var_year);
+      table_dynamic += `
       <tr>
         <td>${var_year} years </td>
         <td>₹ ${invstamount.value}</td>
         <td>₹ ${proj_result.expected_amount}</td>
        </tr> 
       `
-      var_year+=3;
+      var_year += 3;
 
     }
-    tab_cap.innerText=`Projected SIP returns for various time durations. [ @${expreturn.value} ]`;
-    projectTable.innerHTML=table_dynamic;
+    tab_cap.innerText = `Projected SIP returns for various time durations. [ @${expreturn.value} ]`;
+    projectTable.innerHTML = table_dynamic;
 
   }
-  function loadResult()
-  {
-    result=calculateSIP();
-    window.scrollBy(0,350);
-    rf1.innerText='Rs. ' + result.expected_amount;
-    rf2.innerText='Rs. ' + result.amount_invested; 
-    rf3.innerText='Rs. ' + result.profit_earned;
+
+  function loadResult() {
+    result = calculateSIP();
+    window.scrollBy(0, 350);
+    rf1.innerText = 'Rs. ' + result.expected_amount;
+    rf2.innerText = 'Rs. ' + result.amount_invested;
+    rf3.innerText = 'Rs. ' + result.profit_earned;
     createGraph();
     createTable();
     console.log(result);
   }
-  $("#calculatebtn").click(function ()
-  {
-    if(validateInput())
-    {
+  $("#calculatebtn").click(function () {
+    if (validateInput()) {
       $("#result_cont").fadeIn();
       loadResult();
-    }
-    else
-    {
-      if(invstamount.value == "" )
-      {
+    } else {
+      if (invstamount.value == "") {
         alert('Please enter Investment amount.');
       }
-      if (invstperiod.value=="")
-      {
+      if (invstperiod.value == "") {
         alert('Please enter Investment period.');
       }
-      if(expreturn.value == "")
-      {
+      if (expreturn.value == "") {
         alert('Please enter Annual Return Rate.');
       }
     }
-    
+
   });
-
-
-
-
 </script>
+
 </html>
